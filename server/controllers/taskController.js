@@ -1,4 +1,4 @@
-const prisma = require("../prisma/prismaClient");
+const prisma = require("../prismaClient");
 
 async function createTask(req, res) {
   try {
