@@ -19,7 +19,7 @@ app.use("/api/tasks", taskRoutes);
 app.use("/api/dashboard", dashboardRoutes);
 
 app.get("/", (req, res) => {
-  res.send("Server Running");
+  res.send("Backend running successfully");
 });
 
 const PORT = process.env.PORT || 5042;
