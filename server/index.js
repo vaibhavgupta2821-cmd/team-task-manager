@@ -22,8 +22,8 @@ app.get("/", (req, res) => {
   res.send("Backend running successfully");
 });
 
-const PORT = process.env.PORT || 5042;
+const PORT = process.env.PORT || 8080;
 
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0", () => {
   console.log(`Server running on ${PORT}`);
 });
