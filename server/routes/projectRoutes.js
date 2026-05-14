@@ -5,19 +5,17 @@ const router = express.Router();
 const {
   createProject,
   getProjects,
-} = require("../controllers/projectController");
-
-const authMiddleware = require("../middleware/authMiddleware");
+} = require(
+  "../controllers/projectController"
+);
 
 router.post(
   "/",
-  authMiddleware,
   createProject
 );
 
 router.get(
   "/",
-  authMiddleware,
   getProjects
 );
 

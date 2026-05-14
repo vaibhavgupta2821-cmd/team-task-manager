@@ -1,20 +1,15 @@
 const prisma = require("../prismaClient");
 
-const createProject = async (
-  req,
-  res
-) => {
+const createProject = async (req, res) => {
   try {
-    const { title, description } =
-      req.body;
+    const { title, description } = req.body;
 
-    const project =
-      await prisma.project.create({
-        data: {
-          title,
-          description,
-        },
-      });
+    const project = await prisma.project.create({
+      data: {
+        title,
+        description,
+      },
+    });
 
     res.json(project);
   } catch (error) {
@@ -24,13 +19,9 @@ const createProject = async (
   }
 };
 
-const getProjects = async (
-  req,
-  res
-) => {
+const getProjects = async (req, res) => {
   try {
-    const projects =
-      await prisma.project.findMany();
+    const projects = await prisma.project.findMany();
 
     res.json(projects);
   } catch (error) {
