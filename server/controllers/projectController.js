@@ -1,4 +1,4 @@
-const prisma = require("../prismaClient");
+const prisma = require("../prisma/prismaClient");
 
 const createProject = async (
   req,
